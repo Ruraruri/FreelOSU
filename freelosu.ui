@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FreelOSU</class>
+ <widget class="QWidget" name="FreelOSU">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>400</width>
+    <height>300</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>FreelOSU</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="freelosu.qrc">
+    <normaloff>:/OsuIcon/FreelOSU_small.png</normaloff>:/OsuIcon/FreelOSU_small.png</iconset>
+  </property>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>400</width>
+     <height>300</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>400</width>
+     <height>300</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>400</width>
+     <height>300</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTabBar::tab:selected,
+QTabBar::tab:hover {
+	border: none;
+	background: #A9BCD0;
+}
+
+QTabBar::tab { 
+	height: 25px;
+	width: 200px; 
+	background: #373F51;
+	border-color: #373F51;
+	color: #D8DBE2
+};</string>
+   </property>
+   <property name="tabShape">
+    <enum>QTabWidget::Rounded</enum>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>20</width>
+     <height>20</height>
+    </size>
+   </property>
+   <widget class="QWidget" name="tab">
+    <property name="maximumSize">
+     <size>
+      <width>394</width>
+      <height>270</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(27, 27, 30);
+border:none</string>
+    </property>
+    <attribute name="title">
+     <string>Logs</string>
+    </attribute>
+    <widget class="QTextBrowser" name="log_box">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>80</y>
+       <width>370</width>
+       <height>180</height>
+      </rect>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>400</width>
+       <height>300</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-color: rgb(216, 219, 226);
+background-color: rgb(55, 63, 81);
+color: rgb(216, 219, 226);</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="refresh_cache_button">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>10</y>
+       <width>291</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	background-color: rgb(55, 63, 81);
+	border-color: rgb(55, 63, 81);
+	color: rgb(216, 219, 226);
+	border: none;
+}
+
+QPushButton:pressed {
+	background-color: #A9BCD0;	
+}</string>
+     </property>
+     <property name="text">
+      <string>Refresh Beatmap Cache</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="set_keybind_button">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>42</y>
+       <width>291</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	background-color: rgb(55, 63, 81);
+	border-color: rgb(55, 63, 81);
+	color: rgb(216, 219, 226);
+	border: none;
+}
+
+QPushButton:pressed {
+	background-color: #A9BCD0;	
+}</string>
+     </property>
+     <property name="text">
+      <string>Load Keybinds</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="icon_label">
+     <property name="geometry">
+      <rect>
+       <x>22</x>
+       <y>16</y>
+       <width>51</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/OsuIcon/FreelOSU_small.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <property name="maximumSize">
+     <size>
+      <width>394</width>
+      <height>270</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(27, 27, 30);
+border:none</string>
+    </property>
+    <attribute name="title">
+     <string>Settings</string>
+    </attribute>
+    <widget class="QSpinBox" name="input_delay_box">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>20</y>
+       <width>161</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(55, 63, 81);
+color: rgb(216, 219, 226);</string>
+     </property>
+     <property name="minimum">
+      <number>-500</number>
+     </property>
+     <property name="maximum">
+      <number>500</number>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="min_variance_box">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>70</y>
+       <width>161</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(55, 63, 81);
+color: rgb(216, 219, 226);</string>
+     </property>
+     <property name="maximum">
+      <number>1000</number>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="median_variance_box">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>120</y>
+       <width>161</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(55, 63, 81);
+color: rgb(216, 219, 226);</string>
+     </property>
+     <property name="maximum">
+      <number>1000</number>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="save_button">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>220</y>
+       <width>131</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	background-color: rgb(55, 63, 81);
+	border-color: rgb(55, 63, 81);
+	color: rgb(216, 219, 226);
+	border: none;
+}
+
+QPushButton:pressed {
+	background-color: #A9BCD0;	
+}</string>
+     </property>
+     <property name="text">
+      <string>Save</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="load_button">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>220</y>
+       <width>131</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	background-color: rgb(55, 63, 81);
+	border-color: rgb(55, 63, 81);
+	color: rgb(216, 219, 226);
+	border: none;
+}
+
+QPushButton:pressed {
+	background-color: #A9BCD0;	
+}</string>
+     </property>
+     <property name="text">
+      <string>Load</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="input_delay_label">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>171</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(216, 219, 226);
+font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Input Delay</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="min_variance_label">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>70</y>
+       <width>171</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(216, 219, 226);
+font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Min Variance</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="median_variance_label">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>120</y>
+       <width>171</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(216, 219, 226);
+font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Median Variance</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="max_variance_box">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>170</y>
+       <width>161</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(55, 63, 81);
+color: rgb(216, 219, 226);</string>
+     </property>
+     <property name="maximum">
+      <number>1000</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="max_variance_label">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>170</y>
+       <width>171</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(216, 219, 226);
+font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Median Variance</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="freelosu.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>refresh_cache_button</sender>
+   <signal>clicked()</signal>
+   <receiver>FreelOSU</receiver>
+   <slot>refresh_beatmap_cache()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>204</x>
+     <y>52</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>298</x>
+     <y>-11</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>input_delay_box</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>FreelOSU</receiver>
+   <slot>set_input_delay(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>243</x>
+     <y>65</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>279</x>
+     <y>-3</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>min_variance_box</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>FreelOSU</receiver>
+   <slot>set_min_variance(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>266</x>
+     <y>100</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>401</x>
+     <y>59</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>median_variance_box</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>FreelOSU</receiver>
+   <slot>set_median_variance(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>161</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>404</x>
+     <y>135</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>max_variance_box</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>FreelOSU</receiver>
+   <slot>set_max_variance(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>274</x>
+     <y>202</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>401</x>
+     <y>188</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>set_keybind_button</sender>
+   <signal>clicked()</signal>
+   <receiver>FreelOSU</receiver>
+   <slot>get_key_binds()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>156</x>
+     <y>81</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>403</x>
+     <y>110</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>save_button</sender>
+   <signal>clicked()</signal>
+   <receiver>FreelOSU</receiver>
+   <slot>save_settings()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>149</x>
+     <y>268</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>400</x>
+     <y>257</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>load_button</sender>
+   <signal>clicked()</signal>
+   <receiver>FreelOSU</receiver>
+   <slot>load_settings()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>255</x>
+     <y>267</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>276</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>refresh_beatmap_cache()</slot>
+  <slot>set_input_delay(int)</slot>
+  <slot>set_error(double)</slot>
+  <slot>set_max_variance(int)</slot>
+  <slot>set_median_variance(int)</slot>
+  <slot>set_min_variance(int)</slot>
+  <slot>get_key_binds()</slot>
+  <slot>save_settings()</slot>
+  <slot>load_settings()</slot>
+ </slots>
+</ui>
